@@ -92,17 +92,18 @@ This repository is useful for researchers, students, and developers interested i
 **Hybrid Quantum-Classical Medical Prediction using Variational Quantum Classifiers, with comparative evaluation against classical machine learning baselines across multiple disease datasets.** [1]
 
 # Example metrics table
-| Dataset        | Model               | Accuracy | Precision | Recall | F1-score |
-|---------------|---------------------|----------|-----------|--------|----------|
-| Diabetes      | Logistic Regression | 0.6948   | 0.5778    | 0.4815 | 0.5253   |
-| Diabetes      | Random Forest       | 0.7792   | 0.7083    | 0.6296 | 0.6667   |
-| Diabetes      | VQC                 | (fill)   | (fill)    | (fill) | (fill)   |
-| Heart Disease | Logistic Regression | (fill)   | (fill)    | (fill) | (fill)   |
-| Heart Disease | Random Forest       | (fill)   | (fill)    | (fill) | (fill)   |
-| Heart Disease | VQC                 | (fill)   | (fill)    | (fill) | (fill)   |
-| Kidney Disease| Logistic Regression | 1.0000   | 1.0000    | 1.0000 | 1.0000   |
-| Kidney Disease| Random Forest       | 1.0000   | 1.0000    | 1.0000 | 1.0000   |
-| Kidney Disease| VQC                 | 0.7625   | 1.0000    | 0.6200 | 0.7654   |
-| Liver Disease | Logistic Regression | 0.7350   | 0.7407    | 0.9639 | 0.8377   |
-| Liver Disease | Random Forest       | 0.7436   | 0.7732    | 0.9036 | 0.8333   |
-| Liver Disease | VQC                 | (fill)   | (fill)    | (fill) | (fill)   |
+
+| Dataset         | Model               | Accuracy | Precision | Recall | F1-score |
+|----------------|---------------------|----------|-----------|--------|----------|
+| Diabetes       | Logistic Regression | 0.6948   | 0.5778    | 0.4815 | 0.5253   |
+| Diabetes       | Random Forest       | 0.7792   | 0.7083    | 0.6296 | 0.6667   |
+| Diabetes       | VQC                 | 0.6688   | 0.5366    | 0.4074 | 0.4632   |
+| Heart Disease  | Logistic Regression | 0.8033   | 0.7692    | 0.9091 | 0.8333   |
+| Heart Disease  | Random Forest       | 0.8361   | 0.7805    | 0.9697 | 0.8649   |
+| Heart Disease  | VQC                 | 0.5902   | 0.6053    | 0.6970 | 0.6479   |
+| Kidney Disease | Logistic Regression | 1.0000   | 1.0000    | 1.0000 | 1.0000   |
+| Kidney Disease | Random Forest       | 1.0000   | 1.0000    | 1.0000 | 1.0000   |
+| Kidney Disease | VQC                 | 0.7625   | 1.0000    | 0.6200 | 0.7654   |
+| Liver Disease  | Logistic Regression | 0.7350   | 0.7407    | 0.9639 | 0.8377   |
+| Liver Disease  | Random Forest       | 0.7436   | 0.7732    | 0.9036 | 0.8333   |
+| Liver Disease  | VQC                 | 0.5812   | 0.6932    | 0.7349 | 0.7135   |
