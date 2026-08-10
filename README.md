@@ -107,3 +107,42 @@ This repository is useful for researchers, students, and developers interested i
 | Liver Disease  | Logistic Regression | 0.7350   | 0.7407    | 0.9639 | 0.8377   |
 | Liver Disease  | Random Forest       | 0.7436   | 0.7732    | 0.9036 | 0.8333   |
 | Liver Disease  | VQC                 | 0.5812   | 0.6932    | 0.7349 | 0.7135   |
+
+# Hybrid Quantum-Classical Machine Learning for Disease Detection
+
+## Project Overview
+This project develops a comprehensive diagnostic pipeline that integrates **Classical Machine Learning** (Logistic Regression, Random Forest) with **Variational Quantum Classifiers (VQC)** to predict four major medical conditions:
+1.  **Diabetes** (Pima Indians Dataset)
+2.  **Heart Disease** (UCI Cleveland Dataset)
+3.  **Indian Liver Patient Disease** (ILPD)
+4.  **Chronic Kidney Disease** (CKD)
+
+## Methodology
+The core of this project is a **Hybrid Quantum-Classical** approach:
+- **Classical Preprocessing**: Data cleaning, mean imputation for missing values, and `StandardScaler` normalization.
+- **Dimensionality Reduction**: Principal Component Analysis (PCA) is used to reduce high-dimensional medical features into 4 principal components to match the quantum circuit constraints.
+- **Quantum Circuit**: A Variational Quantum Classifier built using `PennyLane`. It utilizes `AngleEmbedding` for data encoding and `StronglyEntanglingLayers` as the trainable quantum circuit.
+- **Optimization**: A classical `AdamOptimizer` iteratively updates the quantum weights based on the cross-entropy cost function.
+
+## Key Results Summary
+The models were evaluated on Accuracy, Precision, Recall, and F1-Score. 
+
+### Top Performing Models:
+- **Kidney Disease**: Achieved near-perfect classification (1.0 Accuracy) using Classical Random Forest and Logistic Regression.
+- **Diabetes & Heart Disease**: Random Forest consistently outperformed other models, showcasing high precision for clinical diagnostics.
+- **Quantum Performance**: The VQC demonstrated a solid 'proof-of-concept', maintaining competitive performance (approx. 60-75% accuracy) despite using significantly fewer parameters than classical deep learning models.
+
+## Repository Structure
+- `Early_Detection.ipynb`: The primary notebook containing data pipelines and model training logic.
+- `app.py`: A Flask-based web API demonstration for deploying the trained models.
+- `*.joblib`: Saved model artifacts including scalers, imputers, and classical classifiers.
+
+## How to Use
+1. **Setup**: Install dependencies using `pip install pennylane scikit-learn pandas numpy flask`.
+2. **Training**: Run the notebook cells sequentially to fetch data from OpenML/UCI and train the models.
+3. **Deployment**: 
+    - Run `python app.py` to start the local Flask server.
+    - Send a POST request to `http://localhost:5000/predict` with patient data in JSON format to receive a diagnostic prediction.
+
+## Conclusion
+This project illustrates that while classical models currently lead in raw accuracy for structured medical tabular data, Hybrid Quantum Classifiers offer a promising alternative as quantum hardware scales, particularly in their ability to handle complex feature correlations through quantum entanglement.
